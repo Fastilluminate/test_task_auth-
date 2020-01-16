@@ -15,7 +15,7 @@
    font-size: 20pt;
    display: flex;
    justify-content: center;
-   padding: 30px 0 0 0;
+   padding: 60px 0 0 0;
    color: rgb(62, 4, 77);  
 }
 .d-txt {
@@ -60,6 +60,7 @@
    margin: 20px 0 0 0;
    border-style: none;
    font-size: 14px;
+   cursor: pointer;
 }
 
 .btn-box .register:hover {

@@ -1,15 +1,23 @@
 <div class="main">
-   <div class="auth-block">
-       <p class="maintxt">Authorization</p>
+      <p *ngIf ="user">Logged in as: {{ user?.email }} - {{ user?.displayname}}</p>
+      
+      <button *ngIf = "user" class="btn logout" (click)="logout()"  >
+            Logout
+      </button>
+
+      <div class="auth-block" *ngIf="!user">
+            
+            <p class="maintxt">Authorization</p>
     
        <div class="btn-block"> 
-     <button class="btn register">
-           <a routerLink="/register"><p>Register</p></a>
+     <button *ngIf = "!user" (click)="register()" class="btn register">
+           Register
      </button>
      
-     <button class="btn login">
-           <a routerLink="/login"><p>Login<p></a>
+     <button *ngIf= "!user" (click)="login()" class="btn login">
+           Login
      </button>
+      </div>
    </div>
    </div>
-   </div>
+  

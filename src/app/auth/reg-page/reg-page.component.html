@@ -1,0 +1,31 @@
+<div class="main">
+   <div class="auth-box" >
+      <p class="m-txt">reg</p>
+      <p class="d-txt">fill all fields</p>
+  <form #userRegForm ="ngForm" (ngSubmit) = "createUser(userRegForm)">
+      <div class="input-box">  
+      
+      <div id="fullname" class="fullname box">
+         <p>Fullname</p>
+         <input ngModel #fullname="ngModel" type="fullname" name="fullname">
+      </div>
+
+      <div id="email" class="email box">
+         <p>E-mail</p>
+         <input ngModel #email="ngModel" type="email" name="email">
+      </div>
+
+      <div id="password" class="password box">
+         <p>Password</p>
+         <input ngModel #password="ngModel" type="password" name="password">
+      </div>
+   
+   </div>
+      <div class="btn-box">
+         <button type="submit" class="btn register">
+         submit
+      </button>
+   </div>
+</form>
+</div>
+</div>
