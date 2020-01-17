@@ -1,23 +1,22 @@
 <div class="main">
-      <p *ngIf ="user">Logged in as: {{ user?.email }} - {{ user?.displayname}}</p>
-      
-      <button *ngIf = "user" class="btn logout" (click)="logout()"  >
-            Logout
-      </button>
 
-      <div class="auth-block" *ngIf="!user">
-            
-            <p class="maintxt">Authorization</p>
-    
-       <div class="btn-block"> 
+
+
+      <div class="auth-block">
+            <p class="usertxt" *ngIf="user">Logged in as: "{{ user?.email }}" name is: "{{ user?.displayName}}" </p>
+            <p class="maintxt" *ngIf="!user">Authorization</p>
+
+       <div class="btn-block">
      <button *ngIf = "!user" (click)="register()" class="btn register">
            Register
      </button>
-     
+
      <button *ngIf= "!user" (click)="login()" class="btn login">
            Login
      </button>
-      </div>
+      <button *ngIf="user" class="btn logout" (click)="logout()">
+           Logout
+      </button>
+    </div>
    </div>
    </div>
-  
