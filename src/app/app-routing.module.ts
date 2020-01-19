@@ -7,6 +7,7 @@ import { RegPageComponent } from './auth/reg-page/reg-page.component';
 import { LogPageComponent } from './auth/log-page/log-page.component';
 import { AccPageComponent } from './acc-page/acc-page.component';
 import { from } from 'rxjs';
+import { AuthGuard } from './auth/auth.guard';
 
 
 const routes: Routes = [
@@ -14,7 +15,7 @@ const routes: Routes = [
     { path: 'home', component: HomePageComponent},
     { path: 'register', component: RegPageComponent},
     { path: 'login', component: LogPageComponent},
-    { path: 'account', component: AccPageComponent}
+    { path: 'account', component: AccPageComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({

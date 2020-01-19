@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Router } from '@angular/router';
+import { Router, GuardsCheckEnd } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -68,4 +68,11 @@ export class AuthService {
     logout() {
       return this.afAuth.auth.signOut(); 
     }
+    
+    loggedIn() {
+      return !!this.afAuth.auth.currentUser;
+    }
   }
+
+  
+

@@ -15,6 +15,8 @@ import { AccPageComponent } from './acc-page/acc-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { environment } from 'src/environments/environment';
 import { from, fromEventPattern } from 'rxjs';
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth.guard';
 
 @NgModule({ 
   declarations: [
@@ -33,7 +35,7 @@ import { from, fromEventPattern } from 'rxjs';
     AngularFirestoreModule
 
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
